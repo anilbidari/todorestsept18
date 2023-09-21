@@ -1,12 +1,12 @@
 ---
-- hosts: ubuntu
-  become_user: jenkins
+- hosts: centos
+  become_user: centos
   tasks:
 
   - name: Download jar file
     get_url:
       url: http://54.254.183.100:8081/repository/maven-releases/todorest-anil.jar
-      dest: /home/ubuntu/
+      dest: /home/centos/
 
   - name: run jar file
-    shell: nohup java -jar todorest-anil.jar /tmp 2>> /dev/null >> /dev/null & 
+    shell: nohup java -jar todorest-anil.jar /tmp 2>> /dev/null >> /dev/null &
