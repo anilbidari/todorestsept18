@@ -1,6 +1,6 @@
 ---
 - hosts: ubuntu
-  become_user: ubuntu
+  become_user: jenkins
   tasks:
 
   - name: Download jar file
